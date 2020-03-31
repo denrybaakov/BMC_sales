@@ -1,0 +1,22 @@
+.goods
+  &__section-title
+    display: flex
+    justify-content: center
+    margin-bottom: 3rem
+  &__title
+    margin: auto
+    text-align: center
+    // max-width: 35%
+    &:after, &:before
+      content: ''
+      display: inline-block
+      margin-bottom: 0.2rem
+      max-width: 450px
+      min-width: 350px
+      height: 8px
+    &:before
+      margin-right: 4rem
+      background: url(../img/category/lineLeft.png) no-repeat center / cover
+    &:after
+      margin-left: 4rem
+      background: url(../img/category/lineRight.png) no-repeat center / cover
