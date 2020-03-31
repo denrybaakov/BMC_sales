@@ -7,7 +7,7 @@ a
   +regular
   font-size: 1.285rem
   text-decoration: none
-  line-height: 3.428rem
+  // line-height: 3.428rem
   padding: 0.94rem 2rem
   cursor: pointer
   &:focus
@@ -40,6 +40,11 @@ a
     border: 2px solid $black
     color: $black
     background-color: transparent
+    transition: background 0.5s
+    transition: color 1s
+    &:hover
+      color: $light
+      background-color: $black
     &:after
       content: ''
       margin-left: 0.928rem
@@ -47,3 +52,7 @@ a
       width: 7px
       height: 10px
       background: url(../img/right.svg) no-repeat center / cover
+    &:hover:after
+      width: 7px
+      height: 10px
+      background: url(../img/right2.svg) no-repeat center / cover
