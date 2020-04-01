@@ -1,3 +1,7 @@
+.page-catalog  .header
+  background-color: $light
+.page-catalog .header-top
+  background-color: $light
 .header
   position: fixed
   top: 0
@@ -39,6 +43,7 @@
     display: flex
     align-items: center
     justify-content: space-between
+    padding-bottom: 1.2rem
 
     &__logo
       margin-top: 1rem
@@ -56,6 +61,8 @@
     font-weight: bold
     color: $black
     text-decoration: none
+    &:hover:last-child
+      border-bottom: none
     &:hover
       color: $primary
       border-bottom: 1px solid $primary
@@ -75,8 +82,12 @@
     &--search
       padding: 0
       margin-right: 3.571rem
+      text-decoration: none
+      &:hover
+        border-bottom: none
   &__search
     display: inline-block
+    text-decoration: none
     width: 17px
     height: 16px
     background: url(../img/header/search2.svg) no-repeat center / cover
@@ -144,6 +155,7 @@
         color: $black
         text-decoration: none
         &:hover
+          color: $primary
           text-decoration: underline
       &:after
         content: ''
