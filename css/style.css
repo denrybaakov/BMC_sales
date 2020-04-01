@@ -332,6 +332,44 @@ template {
 [hidden] {
   display: none; }
 
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  width: 98%;
+  position: relative; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col-30 {
+  max-width: 32%; }
+
+.col-40 {
+  min-width: 32.14rem;
+  max-width: 40%; }
+
+.col-50 {
+  max-width: 50%; }
+
+.col-60 {
+  max-width: 60%; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html {
+  font-size: 14px; }
+
+body {
+  font-family: 'DIN Pro Regular', sans-serif;
+  font-weight: 400;
+  font-size: 1rem; }
+
+img {
+  max-width: 100%; }
+
 a:focus {
   outline: none;
   box-shadow: none; }
@@ -341,6 +379,11 @@ a:focus {
   font-weight: 400;
   font-size: 2.571rem;
   color: #202020; }
+  .title-card {
+    color: #202020;
+    text-decoration: none; }
+    .title-card:hover {
+      text-decoration: underline; }
 
 .button {
   font-family: 'DIN Pro Regular', sans-serif;
@@ -422,6 +465,15 @@ a:focus {
     font-family: 'DIN Pro Regular', sans-serif;
     font-weight: 400;
     font-size: 1.142rem; }
+  .price__old {
+    display: inline-block;
+    padding-left: 1.6rem;
+    padding-top: 0.9rem;
+    font-family: 'DIN Pro Regular', sans-serif;
+    font-weight: 400;
+    font-size: 1.285rem;
+    color: #919191;
+    text-decoration: line-through; }
 
 .rating {
   position: relative;
@@ -484,43 +536,62 @@ a:focus {
   z-index: 1;
   width: 75px; }
 
-.container {
-  max-width: 1366px;
-  margin: 0 auto;
-  width: 98%;
+.card-image-block {
   position: relative; }
 
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
+.card-image {
+  position: relative; }
 
-.col-30 {
-  max-width: 32%; }
+.card-pic {
+  position: absolute;
+  top: 16px;
+  left: -9px;
+  z-index: 11; }
 
-.col-40 {
-  min-width: 32.14rem;
-  max-width: 40%; }
+.card-heart {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: inline-block;
+  width: 20px;
+  height: 19px;
+  background: url(../img/love.svg) no-repeat center;
+  cursor: pointer; }
+  .card-heart:hover {
+    width: 20px;
+    height: 19px;
+    background: url(../img/love2.svg) no-repeat center; }
 
-.col-50 {
-  max-width: 50%; }
+.card-image-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 99%;
+  transition: 1s; }
 
-.col-60 {
-  max-width: 60%; }
+.button__card-image {
+  position: absolute;
+  top: 56px;
+  right: 18px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  border: none;
+  background: #f47920 url(../img/plus.svg) no-repeat center center/58%;
+  cursor: pointer;
+  transition: background-color 1.5s;
+  transition: 0.4s; }
+  .button__card-image:hover {
+    background-color: rgba(244, 121, 32, 0.7); }
+  .button__card-image:focus {
+    outline: none; }
 
-*, *:before, *:after {
-  box-sizing: border-box; }
-
-html {
-  font-size: 14px; }
-
-body {
-  font-family: 'DIN Pro Regular', sans-serif;
-  font-weight: 400;
-  font-size: 1rem; }
-
-img {
-  max-width: 100%; }
+.card-image-block:hover .card-image-content {
+  display: block;
+  transition: 6s; }
 
 .header {
   position: fixed;
@@ -1464,24 +1535,187 @@ img {
   .sale {
     display: none; } }
 
-.goods__section-title {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3rem; }
-
-.goods__title {
-  margin: auto;
-  text-align: center; }
-  .goods__title:after, .goods__title:before {
-    content: '';
+.goods {
+  padding-bottom: 7rem; }
+  .goods__section-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem; }
+  .goods__title {
+    margin: auto;
+    text-align: center; }
+    .goods__title:after, .goods__title:before {
+      content: '';
+      display: inline-block;
+      margin-bottom: 0.2rem;
+      max-width: 450px;
+      min-width: 350px;
+      height: 8px; }
+    .goods__title:before {
+      margin-right: 4rem;
+      background: url(../img/category/lineLeft.png) no-repeat center/cover; }
+    .goods__title:after {
+      margin-left: 4rem;
+      background: url(../img/category/lineRight.png) no-repeat center/cover; }
+  .goods__row {
+    margin-bottom: 3.85rem; }
+  .goods__col-30 {
+    margin-right: 1rem; }
+  .goods__content {
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+    border-bottom: 1px solid #919191; }
+  .goods__title-card {
+    font-family: 'DIN Pro Regular', sans-serif;
+    font-weight: 400;
+    font-size: 1.285rem;
+    margin-bottom: 0.5rem; }
+  .goods__description {
     display: inline-block;
-    margin-bottom: 0.2rem;
-    max-width: 450px;
-    min-width: 350px;
-    height: 8px; }
-  .goods__title:before {
-    margin-right: 4rem;
-    background: url(../img/category/lineLeft.png) no-repeat center/cover; }
-  .goods__title:after {
-    margin-left: 4rem;
-    background: url(../img/category/lineRight.png) no-repeat center/cover; }
+    margin-bottom: 1.3rem; }
+  .goods__rating {
+    margin-bottom: 2.1rem; }
+  .goods__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; }
+  .goods__button {
+    display: block;
+    margin: 0 auto;
+    padding: 0.94rem 2.4rem;
+    font-size: 1rem; }
+
+@media screen and (max-width: 1200px) {
+  .goods__card-pic {
+    width: 20%; } }
+
+@media screen and (max-width: 992px) {
+  .goods__row {
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+  .goods__col-30 {
+    margin-bottom: 3rem; } }
+
+@media screen and (max-width: 768px) {
+  .goods__col-30 {
+    max-width: 38%; } }
+
+@media screen and (max-width: 575px) {
+  .goods__col-30 {
+    max-width: 83%;
+    margin-right: 0; } }
+
+.app {
+  padding-top: 0;
+  color: #fff;
+  background: #f47920 url(../img/mobile-app/bg.png) no-repeat center/cover; }
+  .app__title {
+    margin-top: 5.8rem;
+    margin-bottom: 0.8rem;
+    width: 61.2rem;
+    font-size: 5.142rem;
+    line-height: 84px;
+    text-transform: uppercase;
+    font-family: 'DIN Pro Bold', sans-serif;
+    font-weight: 400; }
+  .app__subtitle {
+    font-family: 'DIN Pro Light', sans-serif;
+    font-weight: 400;
+    font-size: 2.142rem;
+    margin-top: 0;
+    margin-bottom: 3rem; }
+  .app__button {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 0.94rem 2.1rem;
+    transition: background 0.5s;
+    transition: color 1s; }
+    .app__button:hover {
+      background-color: #202020;
+      border: 2px solid #202020; }
+    .app__button:after {
+      width: 7px;
+      height: 10px;
+      background: url(../img/right2.svg) no-repeat center/cover; }
+    .app__button:hover:after {
+      width: 7px;
+      height: 10px;
+      background: url(../img/right2.svg) no-repeat center/cover; }
+  .app__col-60 {
+    max-width: 65%; }
+  .app__col-30 {
+    width: 30%; }
+  .app__image {
+    width: 100%;
+    height: 33.7rem;
+    background: url(../img/mobile-app/mob.png) no-repeat center;
+    background-position-x: 38px;
+    background-position-y: 30px; }
+
+@media screen and (max-width: 992px) {
+  .app__title {
+    font-size: 3.142rem;
+    width: 40rem;
+    line-height: 47px;
+    margin-bottom: 1.5rem; }
+  .app__image {
+    margin-right: 1rem;
+    background-position-x: 0; }
+  .app__col-60 {
+    max-width: 57%; }
+  .app__col-30 {
+    max-width: 50%;
+    width: 40%; } }
+
+@media screen and (max-width: 768px) {
+  .app__row {
+    flex-direction: column;
+    align-items: center; }
+  .app__title {
+    font-size: 2.542rem;
+    width: 100%;
+    text-align: center; }
+  .app__subtitle {
+    text-align: center; }
+  .app__button {
+    display: block;
+    margin: 0 auto; }
+  .app__col-60 {
+    max-width: 100%; }
+  .app__col-30 {
+    max-width: 100%;
+    width: 100%; }
+  .app__image {
+    background-position-x: 62%; } }
+
+@media screen and (max-width: 450px) {
+  .app__title {
+    font-size: 2.142rem; }
+  .app__subtitle {
+    font-size: 1.8rem; } }
+
+.service {
+  padding-top: 6.55rem; }
+  .service__section-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem; }
+  .service__title {
+    margin: auto;
+    text-align: center; }
+    .service__title:after, .service__title:before {
+      content: '';
+      display: inline-block;
+      margin-bottom: 0.2rem;
+      max-width: 450px;
+      min-width: 350px;
+      height: 8px; }
+    .service__title:before {
+      margin-right: 4rem;
+      background: url(../img/category/lineLeft.png) no-repeat center/cover; }
+    .service__title:after {
+      margin-left: 4rem;
+      background: url(../img/category/lineRight.png) no-repeat center/cover; }
