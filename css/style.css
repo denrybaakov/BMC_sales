@@ -389,6 +389,10 @@ a {
     .title-card:hover {
       color: #f47920; }
 
+.bold {
+  font-family: 'DIN Pro Bold', sans-serif;
+  font-weight: 400; }
+
 .button {
   font-family: 'DIN Pro Regular', sans-serif;
   font-weight: 400;
@@ -1710,7 +1714,7 @@ a {
 
 .service {
   padding-top: 6.55rem;
-  padding-bottom: 5rem; }
+  padding-bottom: 7.3rem; }
   .service__section-title {
     display: flex;
     justify-content: center;
@@ -1804,3 +1808,208 @@ a {
   .service__col-30 {
     max-width: 83%;
     margin-right: 0; } }
+
+.footer {
+  background-color: #f6f6f6;
+  padding-top: 2.5rem; }
+  .footer__row {
+    margin-bottom: 2.85rem; }
+  .footer__col-30 {
+    max-width: 25%; }
+    .footer__col-30--app-mob {
+      margin-right: 2rem;
+      max-width: 18%;
+      display: flex;
+      flex-direction: column; }
+    .footer__col-30--platform {
+      margin-right: 13.1rem; }
+    .footer__col-30--contacts {
+      padding-top: 1.7rem;
+      max-width: 220px; }
+  .footer__title {
+    font-family: 'DIN Pro Medium', sans-serif;
+    font-weight: 400;
+    font-size: 1.285rem;
+    max-width: 14.5rem;
+    line-height: 24px;
+    margin-bottom: 1.6rem; }
+    .footer__title--mob {
+      margin-bottom: 2rem; }
+    .footer__title--platform {
+      margin-top: 1.25rem;
+      margin-bottom: 0.9rem;
+      font-family: 'DIN Pro Medium', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 0.857rem; }
+  .footer__description {
+    margin-bottom: 2.59rem;
+    max-width: 19.9rem;
+    line-height: 18px;
+    font-family: 'DIN Pro Medium', sans-serif;
+    font-weight: 400; }
+  .footer__social-links {
+    position: static;
+    display: flex; }
+  .footer__links {
+    display: inline-block;
+    width: 14px;
+    height: 15px;
+    margin-right: 1rem; }
+    .footer__links--tw {
+      background: url(../img/school/tw.svg) no-repeat center; }
+      .footer__links--tw:hover {
+        background: url(../img/school/tw2.svg) no-repeat center; }
+    .footer__links--fb {
+      background: url(../img/school/fb.svg) no-repeat center; }
+      .footer__links--fb:hover {
+        background: url(../img/school/fb2.svg) no-repeat center; }
+    .footer__links--vk {
+      margin-right: 1.5rem;
+      background: url(../img/school/vk.svg) no-repeat center; }
+      .footer__links--vk:hover {
+        background: url(../img/school/vk2.svg) no-repeat center; }
+    .footer__links--yt {
+      margin-right: 0;
+      background: url(../img/school/yt.svg) no-repeat center; }
+      .footer__links--yt:hover {
+        background: url(../img/school/yt2.svg) no-repeat center; }
+  .footer__image-google {
+    margin-bottom: 2rem; }
+  .footer__image-contacts {
+    margin-bottom: 1.8rem; }
+  .footer__button {
+    padding: 0.94rem 2.3rem;
+    font-size: 1rem;
+    font-family: 'DIN Pro Medium', sans-serif;
+    font-weight: 400; }
+  .footer__group-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+  .footer__tel {
+    display: block;
+    margin-bottom: 0.66rem;
+    font-size: 1.714rem;
+    font-family: 'DIN Pro Regular', sans-serif;
+    font-weight: 400;
+    color: #202020; }
+    .footer__tel:hover {
+      color: #f47920;
+      text-decoration: underline; }
+  .footer__mail {
+    margin-bottom: 5.7rem;
+    display: block;
+    font-size: 1.142rem;
+    color: #919191; }
+    .footer__mail:hover {
+      color: #f47920;
+      text-decoration: underline; }
+  .footer__visa {
+    margin-left: 1.3rem;
+    display: inline-block;
+    width: 97px;
+    height: 27px;
+    background: url(../img/footer/visa.png) no-repeat center; }
+  .footer__mastercard {
+    display: inline-block;
+    width: 97px;
+    height: 27px;
+    background: url(../img/footer/mas.png) no-repeat center; }
+
+.platform {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .platform__item {
+    display: inline-block;
+    margin-bottom: 1.369rem;
+    font-size: 0.857rem;
+    color: #919191;
+    text-transform: uppercase; }
+    .platform__item:hover {
+      text-decoration: underline; }
+
+.footer-info {
+  padding: 1.428rem 0;
+  background-color: #202020;
+  color: #fff; }
+  .footer-info__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .footer-info__text {
+    margin: 0; }
+  .footer-info__link {
+    color: #919191;
+    text-decoration: underline; }
+    .footer-info__link:hover {
+      text-decoration: none; }
+
+@media screen and (max-width: 1200px) {
+  .footer__col-30 {
+    max-width: 25%; }
+    .footer__col-30--link {
+      margin-right: 3rem; }
+    .footer__col-30--app-mob {
+      margin-right: 2rem; }
+    .footer__col-30--platform {
+      margin-right: 4.1rem; }
+    .footer__col-30--contacts {
+      padding-top: 1.7rem;
+      max-width: 220px; } }
+
+@media screen and (max-width: 992px) {
+  .footer__row {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 1rem;
+    padding-left: 1rem; }
+  .footer__title--mob {
+    text-align: right; }
+  .footer__col-30--link {
+    width: 100%;
+    max-width: 50%;
+    order: 1; }
+  .footer__col-30--app-mob {
+    margin-right: 0;
+    align-items: flex-end;
+    order: 2;
+    width: 100%;
+    max-width: 30%; }
+  .footer__col-30--platform {
+    order: 3;
+    width: 100%;
+    max-width: 45%; }
+  .footer__col-30--contacts {
+    order: 4;
+    width: 300px; }
+  .footer__mob-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; } }
+
+@media screen and (max-width: 575px) {
+  .footer__row {
+    flex-wrap: nowrap; }
+  .footer__col-30--link {
+    display: none; }
+  .footer__col-30--app-mob {
+    display: none; }
+  .footer__col-30--platform {
+    max-width: 32%; }
+  .footer-info__text {
+    font-size: 1rem;
+    max-width: 58%; } }
+
+@media screen and (max-width: 450px) {
+  .footer__row {
+    flex-direction: column;
+    align-items: center; }
+  .footer__col-30--platform {
+    max-width: 100%;
+    margin-right: 0;
+    text-align: center; }
+  .footer__title--platform {
+    width: 100%;
+    max-width: 100%; } }
