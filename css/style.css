@@ -370,9 +370,13 @@ body {
 img {
   max-width: 100%; }
 
-a:focus {
-  outline: none;
-  box-shadow: none; }
+a {
+  text-decoration: none; }
+  a:focus {
+    outline: none;
+    box-shadow: none; }
+  a:hover {
+    color: #f47920; }
 
 .title {
   font-family: 'DIN Pro Light', sans-serif;
@@ -383,7 +387,7 @@ a:focus {
     color: #202020;
     text-decoration: none; }
     .title-card:hover {
-      text-decoration: underline; }
+      color: #f47920; }
 
 .button {
   font-family: 'DIN Pro Regular', sans-serif;
@@ -815,7 +819,8 @@ a:focus {
 .mobile-header {
   display: none; }
   .mobile-header #menu__toggle {
-    opacity: 0; }
+    opacity: 0;
+    display: none; }
   .mobile-header .menu__btn {
     display: flex;
     align-items: center;
@@ -901,6 +906,8 @@ a:focus {
 @media screen and (max-width: 992px) {
   .header {
     display: none; }
+    .header-top, .header-bottom {
+      display: none; }
   .mobile-header {
     position: fixed;
     top: 0;
@@ -1067,13 +1074,14 @@ a:focus {
       margin-top: 5rem;
       margin-left: 0; }
       .school-form__image--mob-slide-2 {
-        margin-left: 10rem;
+        margin-left: 7rem;
         margin-top: 4.9rem; }
     .school-form__prev {
-      top: 80.9%; }
+      top: 80.9%;
+      left: 5%; }
     .school-form__next {
       top: 80.9%;
-      left: 86%; }
+      left: 73%; }
   .button__primary {
     display: none; }
   .social-links {
@@ -1361,6 +1369,7 @@ a:focus {
   .category {
     padding-top: 0; }
   .category-list__item {
+    margin: 1rem 0;
     width: 100%; }
     .category-list__item--1 {
       padding: 1.428rem 0 1.428rem 6rem; }
@@ -1597,7 +1606,9 @@ a:focus {
     flex-wrap: wrap;
     justify-content: space-evenly; }
   .goods__col-30 {
-    margin-bottom: 3rem; } }
+    margin-bottom: 3rem; }
+  .goods__title:after, .goods__title:before {
+    display: none; } }
 
 @media screen and (max-width: 768px) {
   .goods__col-30 {
@@ -1698,7 +1709,8 @@ a:focus {
     font-size: 1.8rem; } }
 
 .service {
-  padding-top: 6.55rem; }
+  padding-top: 6.55rem;
+  padding-bottom: 5rem; }
   .service__section-title {
     display: flex;
     justify-content: center;
@@ -1719,3 +1731,76 @@ a:focus {
     .service__title:after {
       margin-left: 4rem;
       background: url(../img/category/lineRight.png) no-repeat center/cover; }
+  .service__row {
+    margin-bottom: 4.3rem; }
+  .service__col-30 {
+    margin-right: 1rem; }
+  .service__image {
+    margin-bottom: 0; }
+  .service__subtitle {
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.285rem;
+    font-family: 'DIN Pro Regular', sans-serif;
+    font-weight: 400; }
+    .service__subtitle:hover {
+      color: #f47920; }
+  .service__description:hover {
+    text-decoration: underline;
+    color: #f47920; }
+  .service__btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .service-button__prev {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    background: url(../img/school/prev.png) no-repeat center center;
+    z-index: 9; }
+    .service-button__prev:focus {
+      outline: none; }
+  .service-button__next {
+    display: inline-block;
+    margin-left: 0.6rem;
+    width: 45px;
+    height: 45px;
+    background-color: #202020 !important;
+    cursor: pointer;
+    background: url(../img/school/next.png) no-repeat center center;
+    z-index: 9; }
+    .service-button__next:focus {
+      outline: none; }
+
+@media screen and (max-width: 1200px) {
+  .service__title {
+    margin: auto;
+    text-align: center; }
+    .service__title:after, .service__title:before {
+      content: '';
+      display: inline-block;
+      margin-bottom: 0.2rem;
+      max-width: 350px;
+      min-width: 250px;
+      height: 5px; } }
+
+@media screen and (max-width: 992px) {
+  .service__row {
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+  .service__col-30 {
+    margin-bottom: 3rem; }
+  .service__title:after, .service__title:before {
+    display: none; } }
+
+@media screen and (max-width: 768px) {
+  .service__col-30 {
+    max-width: 38%; } }
+
+@media screen and (max-width: 575px) {
+  .service__col-30 {
+    max-width: 83%;
+    margin-right: 0; } }

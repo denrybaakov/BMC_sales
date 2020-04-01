@@ -6,4 +6,30 @@ $(document).ready(function () {
       prevEl: '.school-form__prev',
     },
   });
+
+  var swiperService = new Swiper('.service__swiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.service-button__next',
+      prevEl: '.service-button__prev',
+    },
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
