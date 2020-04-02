@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
   <title>BMC SALES - партнерская сеть продаж</title>
@@ -89,6 +90,745 @@
 
 
   <main class="page-catalog">
+    <div class="mobile-header">
+      <div class="container">
+        <div class="row row-header">
+          <img src="img/header/logo.png" alt="Логотип">
+          <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+            <ul class="menu__box">
+              <li><a class="menu__item" href="#">Объявления</a></li>
+              <li><a class="menu__item" href="#">Каталоги</a></li>
+              <li><a class="menu__item" href="#">Участники</a></li>
+              <li><a class="menu__item" href="#">Партнеры</a></li>
+              <li><a class="menu__item" href="#">О платформе</a></li>
+              <li><a class="menu__item" href="#">Новости</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <section class="menu">
+      <div class="container">
+        <div class="row menu__row">
+
+          <div class="navigation-top menu__navigation-top">
+            <ul class="breadcrumbs-list menu__breadcrumbs-list">
+              <li>
+                <a href="index.html" class="breadcrumbs-list__item breadcrumbs-list__item--first">Главная</a>
+              </li>
+              <li>
+                <a href="catalog.html" class="breadcrumbs-list__item breadcrumbs-list__item--active">Каталог</a>
+              </li>
+            </ul>
+
+            <div class="filter menu__filter">
+              <div class="filter__item">
+                <label for="sort" class="menu__label" id="label">Сортировать по:</label>
+                <select name="sort" id="sort" class="select menu__select">
+                  <option value="Старые">Сначала старые</option>
+                  <option value="Новые" disabled>Сначала новые</option>
+                  <option value="Все">Все</option>
+                </select>
+              </div>
+              <div class="filter__item">
+                <label for="goods" class="menu__label">Товаров на стр.:</label>
+                <select name="sort" id="goods" class="select2 menu__select menu__select--2">
+                  <option value="12">12 на старнице</option>
+                  <option value="24" disabled>24 на старнице</option>
+                  <option value="Все">Все товары</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.row menu__row -->
+        <div class="row menu__row">
+          <div class="col-30 menu__col-30 menu__col-30--nav">
+            <div class="menu__section-title">
+              <h2 class="menu__title">Категории товаров</h2>
+            </div>
+            <div class="menu__section-catalog">
+              <ul class="category-list menu__category-list">
+                <li>
+                  <a href="" class="  menu__list-item menu__list-item--1">Одежда</a>
+                </li>
+                <li>
+                  <a href="" class=" menu__list-item menu__list-item--2">Обувь</a>
+                </li>
+              </ul>
+              <ul class="menu-list menu__navigation">
+                <li class="menu-list__item menu-list__item--active">Развлечения, досуг</li>
+                <li class="menu-list__item">Посуда и зеркала</li>
+                <li class="menu-list__item">Парфюмерия и косметика</li>
+                <li class="menu-list__item">Оптика</li>
+                <li class="menu-list__item">Мебель</li>
+                <li class="menu-list__item">Компьютерная техника</li>
+                <li class="menu-list__item">Кож.галантерея</li>
+                <li class="menu-list__item">Канцелярские товары</li>
+                <li class="menu-list__item">Источники света</li>
+                <li class="menu-list__item">Инструменты</li>
+                <li class="menu-list__item">Здоровье</li>
+                <li class="menu-list__item">Животные и растения</li>
+                <li class="menu-list__item">Дача и сад</li>
+                <li class="menu-list__item">Бытовая химия</li>
+                <li class="menu-list__item">Сельскохозяйственная продукция и&nbsp;сырье</li>
+                <li class="menu-list__item">Авто</li>
+                <li class="menu-list__item">Очки</li>
+                <li class="menu-list__item">Мобильные телефоны</li>
+                <li class="menu-list__item">Средства личной гигиены</li>
+                <li class="menu-list__item">Строительные материалы</li>
+                <li class="menu-list__item">Сувениры</li>
+                <li class="menu-list__item">Электротовары</li>
+                <li class="menu-list__item">Ювелирные изделия</li>
+                <li class="menu-list__item">Домашний текстиль, ковры</li>
+                <li class="menu-list__item">Туризм и спорт</li>
+                <li class="menu-list__item">Сумки, кошельки</li>
+                <li class="menu-list__item">Разное</li>
+                <li class="menu-list__item">Одежда</li>
+                <li class="menu-list__item">Обувь</li>
+                <li class="menu-list__item">Продукты питания</li>
+                <li class="menu-list__item">Книги</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="col-100 menu__col-100">
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img src="img/popular/1.png" alt="Блузка модель">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="popular__content">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card popular__title-card">Блузка модель 111</h3>
+                </a>
+                <span class="description popular__description">Женская одежда</span>
+                <div class="rating popular__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-1" checked>
+                  <label class="rating__star" for="star-1" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-2">
+                  <label class="rating__star" for="star-2" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-3">
+                  <label class="rating__star" for="star-3" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-4">
+                  <label class="rating__star" for="star-4" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-5">
+                  <label class="rating__star" for="star-5" title="Отлично" aria-label="Отлично"></label>
+
+                </div>
+              </div>
+              <div class="popular__price">
+                <strong class="price">3 000.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+            </div>
+
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img src="img/popular/2.png" alt="Блузка модель">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="popular__content">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card popular__title-card">Пуховики артикул: 2801</h3>
+                </a>
+                <span class="description popular__description">Пуховики</span>
+                <div class="rating popular__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-1" checked>
+                  <label class="rating__star" for="star-1" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-2">
+                  <label class="rating__star" for="star-2" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-3">
+                  <label class="rating__star" for="star-3" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-4">
+                  <label class="rating__star" for="star-4" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-5">
+                  <label class="rating__star" for="star-5" title="Отлично" aria-label="Отлично"></label>
+
+                </div>
+              </div>
+              <div class="popular__price">
+                <strong class="price">21 200.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+            </div>
+
+
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img src="img/popular/3.png" alt="Блузка модель">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="popular__content">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card popular__title-card">Обувь Т 452</h3>
+                </a>
+                <span class="description popular__description">Женская Обувь</span>
+                <div class="rating popular__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-1" checked>
+                  <label class="rating__star" for="star-1" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-2">
+                  <label class="rating__star" for="star-2" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-3">
+                  <label class="rating__star" for="star-3" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-4">
+                  <label class="rating__star" for="star-4" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-5">
+                  <label class="rating__star" for="star-5" title="Отлично" aria-label="Отлично"></label>
+
+                </div>
+              </div>
+              <div class="popular__price">
+                <strong class="price">12 555.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+            </div>
+
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img src="img/popular/4.png" alt="Блузка модель">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="popular__content ">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card popular__title-card">Рюкзак PUMA</h3>
+                </a>
+                <span class="description popular__description">Рюкзаки</span>
+                <div class="rating popular__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-1" checked>
+                  <label class="rating__star" for="star-1" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-2">
+                  <label class="rating__star" for="star-2" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-3">
+                  <label class="rating__star" for="star-3" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-4">
+                  <label class="rating__star" for="star-4" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-5">
+                  <label class="rating__star" for="star-5" title="Отлично" aria-label="Отлично"></label>
+                </div>
+              </div>
+              <div class="popular__price">
+                <strong class="price">5 000.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+            </div>
+
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img class="card-image goods__card-image" src="img/goods/2.png" alt="Пальто детское">
+                <img class="card-pic goods__card-pic" src="img/goods/40.png" alt="Проценты">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="goods__content">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card goods__title-card">Туфли детские 555</h3>
+                </a>
+                <span class="description goods__description">Детская обувь</span>
+
+                <div class="rating goods__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-12" checked>
+                  <label class="rating__star" for="star-12" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-22">
+                  <label class="rating__star" for="star-22" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-32">
+                  <label class="rating__star" for="star-32" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-42">
+                  <label class="rating__star" for="star-42" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-52">
+                  <label class="rating__star" for="star-52" title="Отлично" aria-label="Отлично"></label>
+                </div>
+              </div>
+              <div class="goods__price">
+                <strong class="price">8 900.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+              <span class="price__old">13 750.00 <span class="price__old--text">тг.</span></span>
+            </div>
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img class="card-image goods__card-image" src="img/goods/3.png" alt="Пальто детское">
+                <img class="card-pic goods__card-pic" src="img/goods/25.png" alt="Проценты">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="goods__content">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card goods__title-card">Сарафан в клетку №2</h3>
+                </a>
+                <span class="description goods__description">Детская одежда</span>
+
+                <div class="rating goods__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-12" checked>
+                  <label class="rating__star" for="star-12" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-22">
+                  <label class="rating__star" for="star-22" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-32">
+                  <label class="rating__star" for="star-32" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-42">
+                  <label class="rating__star" for="star-42" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-52">
+                  <label class="rating__star" for="star-52" title="Отлично" aria-label="Отлично"></label>
+                </div>
+              </div>
+              <div class="goods__price">
+                <strong class="price">8 000.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+              <span class="price__old">9 750.00 <span class="price__old--text">тг.</span></span>
+            </div>
+
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img class="card-image goods__card-image" src="img/goods/1.png" alt="Пальто детское">
+                <img class="card-pic goods__card-pic" src="img/goods/35.png" alt="Проценты">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="goods__content">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card goods__title-card">Пальто детское</h3>
+                </a>
+                <span class="description goods__description">Детская одежда</span>
+
+                <div class="rating goods__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-12" checked>
+                  <label class="rating__star" for="star-12" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-22">
+                  <label class="rating__star" for="star-22" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-32">
+                  <label class="rating__star" for="star-32" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-42">
+                  <label class="rating__star" for="star-42" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-52">
+                  <label class="rating__star" for="star-52" title="Отлично" aria-label="Отлично"></label>
+                </div>
+              </div>
+              <div class="goods__price">
+                <strong class="price">8 300.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+              <span class="price__old">10 500.00 <span class="price__old--text">тг.</span></span>
+            </div>
+
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img class="card-image goods__card-image" src="img/goods/4.png" alt="Пальто детское">
+                <img class="card-pic goods__card-pic" src="img/goods/20.png" alt="Проценты">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="goods__content">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card goods__title-card">Сарафан в клетку №2</h3>
+                </a>
+                <span class="description goods__description">Мужская одежда</span>
+
+                <div class="rating goods__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-12" checked>
+                  <label class="rating__star" for="star-12" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-22">
+                  <label class="rating__star" for="star-22" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-32">
+                  <label class="rating__star" for="star-32" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-42">
+                  <label class="rating__star" for="star-42" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-52">
+                  <label class="rating__star" for="star-52" title="Отлично" aria-label="Отлично"></label>
+                </div>
+              </div>
+              <div class="goods__price">
+                <strong class="price">1 300.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+              <span class="price__old">1 850.00 <span class="price__old--text">тг.</span></span>
+            </div>
+
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img class="card-image goods__card-image" src="img/r.png" alt="Пальто детское">
+                <img class="card-pic goods__card-pic" src="img/goods/20.png" alt="Проценты">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="goods__content">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card goods__title-card">Рюкзак синий</h3>
+                </a>
+                <span class="description goods__description">Аксессуары</span>
+
+                <div class="rating goods__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-12" checked>
+                  <label class="rating__star" for="star-12" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-22">
+                  <label class="rating__star" for="star-22" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-32">
+                  <label class="rating__star" for="star-32" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-42">
+                  <label class="rating__star" for="star-42" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-52">
+                  <label class="rating__star" for="star-52" title="Отлично" aria-label="Отлично"></label>
+                </div>
+              </div>
+              <div class="goods__price">
+                <strong class="price">8 300.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+              <span class="price__old">10 850.00 <span class="price__old--text">тг.</span></span>
+            </div>
+
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img src="img/popular/1.png" alt="Блузка модель">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="popular__content">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card popular__title-card">Блузка модель 111</h3>
+                </a>
+                <span class="description popular__description">Женская одежда</span>
+                <div class="rating popular__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-1" checked>
+                  <label class="rating__star" for="star-1" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-2">
+                  <label class="rating__star" for="star-2" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-3">
+                  <label class="rating__star" for="star-3" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-4">
+                  <label class="rating__star" for="star-4" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-5">
+                  <label class="rating__star" for="star-5" title="Отлично" aria-label="Отлично"></label>
+
+                </div>
+              </div>
+              <div class="popular__price">
+                <strong class="price">3 000.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+            </div>
+
+
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img src="img/popular/2.png" alt="Блузка модель">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="popular__content">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card popular__title-card">Пуховики артикул: 2801</h3>
+                </a>
+                <span class="description popular__description">Пуховики</span>
+                <div class="rating popular__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-1" checked>
+                  <label class="rating__star" for="star-1" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-2">
+                  <label class="rating__star" for="star-2" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-3">
+                  <label class="rating__star" for="star-3" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-4">
+                  <label class="rating__star" for="star-4" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-5">
+                  <label class="rating__star" for="star-5" title="Отлично" aria-label="Отлично"></label>
+
+                </div>
+              </div>
+              <div class="popular__price">
+                <strong class="price">21 200.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+            </div>
+
+
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img src="img/popular/3.png" alt="Блузка модель">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="popular__content">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card popular__title-card">Обувь Т 452</h3>
+                </a>
+                <span class="description popular__description">Женская Обувь</span>
+                <div class="rating popular__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-1" checked>
+                  <label class="rating__star" for="star-1" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-2">
+                  <label class="rating__star" for="star-2" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-3">
+                  <label class="rating__star" for="star-3" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-4">
+                  <label class="rating__star" for="star-4" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-5">
+                  <label class="rating__star" for="star-5" title="Отлично" aria-label="Отлично"></label>
+
+                </div>
+              </div>
+              <div class="popular__price">
+                <strong class="price">12 555.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+            </div>
+
+
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img src="img/popular/4.png" alt="Блузка модель">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="popular__content ">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card popular__title-card">Рюкзак PUMA</h3>
+                </a>
+                <span class="description popular__description">Рюкзаки</span>
+                <div class="rating popular__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-1" checked>
+                  <label class="rating__star" for="star-1" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-2">
+                  <label class="rating__star" for="star-2" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-3">
+                  <label class="rating__star" for="star-3" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-4">
+                  <label class="rating__star" for="star-4" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-5">
+                  <label class="rating__star" for="star-5" title="Отлично" aria-label="Отлично"></label>
+
+                </div>
+              </div>
+              <div class="popular__price">
+                <strong class="price">5 000.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+            </div>
+
+
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img class="card-image goods__card-image" src="img/goods/2.png" alt="Пальто детское">
+                <img class="card-pic goods__card-pic" src="img/goods/40.png" alt="Проценты">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="goods__content">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card goods__title-card">Туфли детские 555</h3>
+                </a>
+                <span class="description goods__description">Детская обувь</span>
+
+                <div class="rating goods__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-12" checked>
+                  <label class="rating__star" for="star-12" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-22">
+                  <label class="rating__star" for="star-22" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-32">
+                  <label class="rating__star" for="star-32" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-42">
+                  <label class="rating__star" for="star-42" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-52">
+                  <label class="rating__star" for="star-52" title="Отлично" aria-label="Отлично"></label>
+                </div>
+              </div>
+              <div class="goods__price">
+                <strong class="price">8 900.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+              <span class="price__old">13 750.00 <span class="price__old--text">тг.</span></span>
+            </div>
+
+            <div class="col-30 menu__card-col-30">
+              <div class="card-image-block">
+                <img class="card-image goods__card-image" src="img/goods/3.png" alt="Пальто детское">
+                <img class="card-pic goods__card-pic" src="img/goods/25.png" alt="Проценты">
+                <div class="card-image-content">
+                  <a href="#" class="card-heart"></a>
+                  <button class="button__card-image"></button>
+                </div>
+              </div>
+              <div class="goods__content">
+                <a class="title-card" href="card.html">
+                  <h3 class="title-card goods__title-card">Сарафан в клетку №2</h3>
+                </a>
+                <span class="description goods__description">Детская одежда</span>
+
+                <div class="rating goods__rating">
+                  <input type="radio" class="rating__input" name="rating" id="star-12" checked>
+                  <label class="rating__star" for="star-12" title="Ужасно" aria-label="Ужасно"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-22">
+                  <label class="rating__star" for="star-22" title="Плохо" aria-label="Плохо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-32">
+                  <label class="rating__star" for="star-32" title="Нормально" aria-label="Нормально"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-42">
+                  <label class="rating__star" for="star-42" title="Хорошо" aria-label="Хорошо"></label>
+
+                  <input type="radio" class="rating__input" name="rating" id="star-52">
+                  <label class="rating__star" for="star-52" title="Отлично" aria-label="Отлично"></label>
+                </div>
+              </div>
+              <div class="goods__price">
+                <strong class="price">8 000.00 <span class="price__text">тг.</span></strong>
+                <button class="button__card"></button>
+              </div>
+              <span class="price__old">9 750.00 <span class="price__old--text">тг.</span></span>
+            </div>
+
+
+
+
+            <div class="menu__bottom">
+              <span class="description menu__description">Найдено товаров:
+                <span class="menu__count-goods">510</span>.
+                Показано с <span class="menu__page1">1</span>
+                по <span class="menu__page2">15</span></span><br>
+
+              <ul class="pagination menu__pagination">
+                <li class="pagination__item pagination__item--active">
+                  <a href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#">4</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#">...</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#">30</a>
+                </li>
+                <li class="pagination__item pagination__item--next">
+                  <a href="#" class="pagination__item--img"></a>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+    </section>
 
 
 
@@ -291,6 +1031,7 @@
 
 
   <script src="js/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>

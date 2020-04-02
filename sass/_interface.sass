@@ -221,3 +221,121 @@ a
 
 .card-image-block:hover  .card-image-content
   display: block
+
+// селекты 
+.select
+  +regular
+  display: block
+  max-width: 319px
+  width: 319px
+  position: relative
+
+.new-select
+  margin-top: 0.7rem
+  +regular
+  border: 1px solid #ced4da
+  padding: 14px 18px
+  cursor: pointer
+  position: relative
+
+.new-select__list
+  border: 1px solid #ced4da
+  cursor: pointer
+  position: absolute
+  top: 45px
+  left: 0
+  width: 100%
+  z-index: 999
+  background-color: $light
+
+.new-select__list.on
+  display: block
+
+.new-select__item span
+  display: block
+  padding: 10px 15px
+
+.new-select__item span:hover
+  color: $primary
+
+.new-select:after
+  content: ''
+  display: block
+  width: 15px
+  height: 15px
+  position: absolute
+  right: 19px
+  top: 15px
+  background: url('../img/down.svg') no-repeat right center
+  -webkit-transition: all .27s ease-in-out
+  -o-transition: all .27s ease-in-out
+  transition: all .27s ease-in-out
+  -webkit-transform: rotate(0deg)
+  -ms-transform: rotate(0deg)
+  -o-transform: rotate(0deg)
+  transform: rotate(0deg)
+
+.new-select.on:after
+  -webkit-transform: rotate(180deg)
+  -ms-transform: rotate(180deg)
+  -o-transform: rotate(180deg)
+  transform: rotate(180deg)
+
+//------2 
+.select2
+  +regular
+  display: block
+  max-width: 202px
+  width: 202px
+  position: relative
+
+.new-select2
+  margin-top: 0.7rem
+  +regular
+  border: 1px solid #ced4da
+  padding: 14px 18px
+  cursor: pointer
+  position: relative
+
+.new-select__list2
+  border: 1px solid #ced4da
+  cursor: pointer
+  position: absolute
+  top: 45px
+  left: 0
+  width: 100%
+  z-index: 999
+  background-color: $light
+
+.new-select__list2.on
+  display: block
+
+.new-select__item2 span
+  display: block
+  padding: 10px 15px
+
+.new-select__item2 span:hover
+  color: $primary
+
+.new-select2:after
+  content: ''
+  display: block
+  width: 15px
+  height: 15px
+  position: absolute
+  right: 19px
+  top: 15px
+  background: url('../img/down.svg') no-repeat right center
+  -webkit-transition: all .27s ease-in-out
+  -o-transition: all .27s ease-in-out
+  transition: all .27s ease-in-out
+  -webkit-transform: rotate(0deg)
+  -ms-transform: rotate(0deg)
+  -o-transform: rotate(0deg)
+  transform: rotate(0deg)
+
+.new-select2.on:after
+  -webkit-transform: rotate(180deg)
+  -ms-transform: rotate(180deg)
+  -o-transform: rotate(180deg)
+  transform: rotate(180deg)
