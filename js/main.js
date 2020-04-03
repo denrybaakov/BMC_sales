@@ -15,6 +15,37 @@ $(document).ready(function () {
     },
   });
 
+  var swiperFavorite = new Swiper('.favorite__swiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.favorite-block-button__next',
+      prevEl: '.favorite-block-button__prev',
+    },
+  });
+
+
+  var galleryThumbs = new Swiper('.card-info__gallary-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 5,
+    loop: true,
+    freeMode: true,
+    loopedSlides: 5, //looped slides should be the same
+    watchSlidesVisibility: false,
+    watchSlidesProgress: false,
+  });
+  var galleryTop = new Swiper('.card-info__gallary', {
+    spaceBetween: 10,
+    loop: true,
+    loopedSlides: 5, //looped slides should be the same
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+  });
+
 
 
 

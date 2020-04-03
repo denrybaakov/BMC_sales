@@ -339,3 +339,127 @@ a
   -ms-transform: rotate(180deg)
   -o-transform: rotate(180deg)
   transform: rotate(180deg)
+
+  //========= radio button ==============
+.tabs > input[type="radio"]:checked,
+.tabs > input[type="radio"]:not(:checked),
+.delivery-group > input[type="radio"]:checked,
+.delivery-group > input[type="radio"]:not(:checked),
+  position: absolute
+  display: none
+
+// .radio-1:checked,
+// .radio-1:not(:checked)
+//   position: absolute
+//   display: none
+
+.tabs > input[type="radio"]:checked + label,
+.tabs > input[type="radio"]:not(:checked) + label,
+.delivery-group > input[type="radio"]:checked + label,
+.delivery-group > input[type="radio"]:not(:checked) + label
+  display: inline-block
+  position: relative
+  // padding-left: 28px
+  cursor: pointer
+
+.tabs > input[type="radio"]:checked + label:before,
+.tabs > input[type="radio"]:not(:checked) + label:before,
+.delivery-group > input[type="radio"]:checked + label:before,
+.delivery-group > input[type="radio"]:not(:checked) + label:before
+  content: ''
+  position: absolute
+  // left: 2px
+  // top: 3px
+  width: 18px
+  height: 18px
+  border: 1px solid $gray2
+  background-color: $light
+
+.tabs > input[type="radio"]:checked + label:before,
+.tabs > input[type="radio"]:not(:checked) + label:before,
+.delivery-group > input[type="radio"]:checked + label:before,
+.delivery-group > input[type="radio"]:not(:checked) + label:before
+  border-radius: 100%
+
+.tabs > input[type="radio"]:checked + label:after,
+.tabs > input[type="radio"]:not(:checked) + label:after,
+.delivery-group > input[type="radio"]:checked + label:after,
+.delivery-group > input[type="radio"]:not(:checked) + label:after
+  content: ""
+  position: absolute
+  -ms-transition: all 0.2s ease
+  -webkit-transition: all 0.2s ease
+  -moz-transition: all 0.2s ease
+  -o-transition: all 0.2s ease
+  transition: all 0.2s ease
+
+.tabs > input[type="radio"]:checked + label:after,
+.tabs > input[type="radio"]:not(:checked) + label:after,
+.delivery-group > input[type="radio"]:checked + label:after,
+.delivery-group > input[type="radio"]:not(:checked) + label:after
+  // left: 6px
+  // top: 7px
+  width: 10px
+  height: 10px
+  border-radius: 100%
+  background-color: $black
+
+.tabs > input[type="radio"]:not(:checked) + label:after,
+.delivery-group > input[type="radio"]:not(:checked) + label:after
+  opacity: 0
+.tabs > input[type="radio"]:checked + label:after,
+.delivery-group > input[type="radio"]:checked + label:after
+  opacity: 1
+
+.tabs
+  // font-size: 0
+  // max-width: 350px
+
+.tabs > div
+  display: none
+  border: 1px solid $gray2
+  border-left: none
+  border-bottom: none
+  border-right: none
+  // padding: 10px 15px
+  font-size: 16px
+
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2
+  display: block
+.tabs > label
+  display: inline-block
+  text-align: center
+  vertical-align: middle
+  user-select: none
+  background-color: #fff
+  border: none
+  border-bottom: 1px solid $gray2
+  // padding: 2px 8px
+  font-size: 16px
+  line-height: 1.5
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out
+  cursor: pointer
+  position: relative
+  top: 1px
+.tabs > label:not(:first-of-type)
+  border-left: none
+
+.tabs > label:not(:last-of-type)
+  border-bottom: 1px solid #fff
+
+.tabs > input[type="radio"]:checked + label
+  // padding: 0 2.15rem 1.5rem 2.1rem
+  background-color: #fff
+  border-left: $light
+  border-top: $light
+  border-right: 1px solid $gray2
+  border-bottom: 1px solid $light
+.tabs > input[type="radio"]:not(:checked) + label
+  // padding: 0 2.15rem 1.5rem 4.1rem
+  // border-bottom: 1px solid $gray2
+
+input[type="radio"]:not(:checked) + label:before
+  // left: 28px
+  // top: 5px
+  // padding: 0

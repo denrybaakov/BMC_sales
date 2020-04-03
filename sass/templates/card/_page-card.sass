@@ -1,0 +1,351 @@
+.page-card
+  margin-top: 11rem
+  &__service
+    padding-top: 0
+
+.card-info
+  padding-top: 3rem
+  &__breadcrumbs-card
+    margin-bottom: 4.25rem
+  &__gallary
+    width: 39.285rem
+    height: 39.285rem
+    border: 1px solid $gray2
+  &__slide
+    display: flex
+    justify-content: center
+    align-items: center
+  &__thumbs
+    margin-top: 2rem
+    border: 1px solid $gray2
+    width: 6.214rem
+    height: 6.214rem
+    object-fit: contain
+    padding: 1rem
+  &__col-60
+    max-width: 57.5%
+    width: 57.5%
+
+  &__section
+    padding-bottom: 1.9rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid $gray2
+  &__title
+    margin-top: 0
+    margin-bottom: 0
+    font-size: 1.714rem
+    line-height: 18px
+    +medium
+  &__info-section
+    display: flex
+  &__description
+    margin-right: 1rem
+  &__block-price
+    padding: 2.2rem 0
+    padding-bottom: 2.6rem
+    margin-bottom: 0
+    border-bottom: 1px dashed $gray2
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__price
+    +bold
+    font-size: 3.4rem
+    text-transform: uppercase
+
+  &__block-color
+    padding: 2.15rem 0
+    display: flex
+    align-items: center
+    border-bottom: 1px dashed $gray2
+  &__delivery
+    width: 100%
+    border-bottom: 1px dashed $gray2
+    padding-bottom: 2.1rem
+  &__content-1
+    display: flex
+    padding-left: 2.3rem
+    padding-top: 0.4rem
+  &__label
+    padding: 0 2.15rem 1.5rem 2.1rem
+    &:before
+      left: 2px
+      top: 5px
+    &:after
+      left: 6px
+      top: 9px
+    &--2
+      padding: 0 2.15rem 1.5rem 4.1rem
+      &:before
+        left: 28px
+        top: 5px
+      &:after
+        top: 9px
+        left: 32px
+    &--3
+      padding-left: 1.9rem
+      &:before
+        left: -3px
+      &:after
+        top: 4px
+        left: 1px
+    &--4
+      padding-left: 2.1rem
+      &:before
+        top: 0
+        left: 1px
+      &:after
+        top: 4px
+        left: 5px
+        //--
+          //--
+  //--кнопки 
+  &__buttons
+    display: flex
+    justify-content: space-between
+    padding-top: 2.1rem
+    padding-bottom: 2.1rem
+    border-bottom: 1px dashed $gray2
+  &__section-flex
+    // display: flex
+    max-width: 34rem
+    width: 100%
+  &__button
+    position: relative
+
+    display: inline-block
+    margin-right: 1.2rem
+    max-width: 17.857rem
+    width: 100%
+    border: 2px solid $primary
+    padding: 1.1rem 1rem 1rem 2.1rem
+    color: $light
+    font-size: 1.285rem
+    background-color: $primary
+    transition: 0.5s
+    transition: color 1s
+    &:hover
+      background-color: $light
+      color: $primary
+    &:before
+      content: ''
+      position: absolute
+      top: 17px
+      left: 19px
+      width: 14px
+      height: 17px
+      display: inline-block
+      background: url(../img/header/market-icon.png) no-repeat center / cover
+    &:hover:before
+      width: 14px
+      height: 17px
+      background: url(../img/header/market-icon2.png) no-repeat center / cover
+    &-love
+      position: relative
+      display: inline-block
+      // max-width: 14.857rem
+      // width: 100%
+      border: 2px solid $black
+      padding: 1rem 2.3rem 1rem 3.9rem
+      color: $black
+      font-size: 1.285rem
+      background-color: $light
+      transition: 0.5s
+      transition: color 1s
+      &:before
+        content: ''
+        position: absolute
+        top: 17px
+        left: 21px
+        width: 16px
+        height: 15px
+        display: inline-block
+        background: url(../img/header/heart-black.svg) no-repeat center / cover
+      &:hover
+        background-color: $black
+        color: $light
+      &:hover:before
+        width: 16px
+        height: 15px
+        background: url(../img/header/love.png) no-repeat center / contain
+    &-offer
+      position: relative
+      // max-width: 14.857rem
+      // width: 100%
+      border: 2px solid $black
+      margin-right: 0.1rem
+      padding: 1rem 2.3rem 1.1rem 1.5rem
+      color: $black
+      font-size: 1.285rem
+      background-color: $light
+      transition: 0.5s
+      transition: color 1s
+      &:hover
+        background-color: $black
+        color: $light
+
+.color-text
+  font-size: 1.142rem
+  margin-right: 2.2rem
+.color-list
+  list-style: none
+  margin: 0
+  padding: 0
+  display: flex
+  &__item
+    font-size: 1rem
+    display: flex
+    align-items: center
+    border: 1px solid $gray2
+    padding: 0.08rem 1.25rem 0.08rem 0.08rem
+    cursor: pointer
+    margin-right: 0.8rem
+    &:hover
+      border: 1px solid $primary
+    &:before
+      content: ''
+      margin-right: 1.5rem
+      display: inline-block
+      width: 26px
+      height: 26px
+    &--green
+      &:before
+        background-color: #86c255
+    &--yellow
+      &:before
+        background-color: #e9eb5b
+    &--red
+      &:before
+        background-color: #e84b4b
+    &--blue
+      &:before
+        background-color: #4b91e8
+
+.price-subtitle
+  font-size: 1.714rem
+.price-description
+  margin-bottom: 0
+  margin-top: 0.9rem
+  font-size: 1.142rem
+  b
+    color: $black
+    +bold
+
+.breadcrumbs-card
+  margin: 0
+  padding: 0
+  list-style: none
+  display: flex
+  &__item
+    +regular
+    font-size: 1.1rem
+    margin-right: 1.05rem
+    color: $black
+    &:after
+      content: ''
+      margin-left: 1rem
+      display: inline-block
+      width: 1px
+      height: 10px
+      background-color: $gray
+    &--first
+      color: $black
+    &--active
+      pointer-events: none
+      color: $gray
+      &:after
+        display: none
+
+.favorite-block
+  padding-top: 6.55rem
+  padding-bottom: 6.6rem
+  &__row
+    padding-left: 1rem
+  &__swiper
+    height: 100%
+  &-button
+    &__prev
+      display: inline-block
+      width: 45px
+      height: 45px
+      background-color: transparent
+      border: 1px solid #cccccc
+      cursor: pointer
+      background: url(../img/school/prev.png) no-repeat center center
+      z-index: 9
+      &:focus
+        outline: none
+    &__next
+      display: inline-block
+      margin-left: 0.6rem
+      width: 45px
+      height: 45px
+      background-color: $black !important
+      cursor: pointer
+      background: url(../img/school/next.png) no-repeat center center
+      z-index: 9
+      &:focus
+        outline: none
+  //   // max-height: 50rem
+
+  &__section-title
+    display: flex
+    justify-content: center
+    margin-bottom: 3rem
+  &__title
+    margin: auto
+    text-align: center
+    // max-width: 35%
+    &:after, &:before
+      content: ''
+      display: inline-block
+      margin-bottom: 0.2rem
+      max-width: 380px
+      min-width: 280px
+      height: 8px
+    &:before
+      margin-right: 4rem
+      background: url(../img/category/lineLeft.png) no-repeat center / cover
+    &:after
+      margin-left: 4rem
+      background: url(../img/category/lineRight.png) no-repeat center / cover
+
+.delivery
+  &-text
+    margin-top: 2rem
+    margin-bottom: 1.8rem
+    font-size: 1.142rem
+  &-text2
+    margin-top: 1.2rem
+    margin-bottom: 1.5rem
+  &-box
+    display: flex
+  &-group
+    border: 1px solid $gray2
+    margin-right: 0.5rem
+    padding: 0.3rem 0.7rem 0.5rem 0.5rem
+    font-size: 1rem
+    &:hover
+      border: 1px solid $primary
+
+@media screen and ( max-width: 1200px )
+  .favorite-block
+    &__title
+      margin: auto
+      text-align: center
+      // max-width: 35%
+      &:after, &:before
+        content: ''
+        display: inline-block
+        margin-bottom: 0.2rem
+        max-width: 300px
+        min-width: 200px
+        height: 5px
+
+  @media screen and ( max-width: 992px )
+    .favorite-block
+      &__title
+        &:after, &:before
+          display: none
