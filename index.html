@@ -50,7 +50,8 @@
               </li>
             </ul>
           </div>
-          <a href="#" class="header-top__enter ">Вход на сайт <span class="header-top__lock"></span> </a>
+          <a href="#" class="header-top__enter " data-toggle="modal">Вход на сайт <span class="header-top__lock"></span>
+          </a>
         </div>
       </div>
     </div>
@@ -734,7 +735,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer ">
     <div class="container">
       <div class="row footer__row">
 
@@ -811,6 +812,35 @@
     </div>
   </footer>
 
+
+  <div class="modal">
+    <div class="modal__dialog">
+      <a class="modal__close"></a>
+      <h3 class="modal__title">Регистрация</h3>
+      <form action="#" method="POST" class="form modal__form">
+        <div class="input-group modal__input-group">
+          <label for="user-name" class="label form__label label--light"></label>
+          <input type="text" class="input input__user" id="user-name" name="userName" placeholder="Введите Ваше имя "
+            autofocus>
+        </div>
+        <div class="input-group modal__input-group">
+          <label for="user-phone" class="label form__label label--light"></label>
+          <input type="tel" class="input input__phone" id="user-phone" name="userPhone" placeholder="Номер телефона:">
+        </div>
+        <div class="input-group modal__input-group modal__input-group--last">
+          <label for="user-email" class="label form__label label--light"></label>
+          <input type="email" class="input input__email" name="userEmail" id="user-email" placeholder="Ваш Email">
+        </div>
+        <div class="policy modal__policy">
+          <input type="checkbox" name="policyCheckbox" class="policy__checkbox" id="modal__policy-checkbox" checked>
+          <label for="modal__policy-checkbox" class="policy__label"> Политика&nbsp;<a
+              href="https://ufalel.ru/tpl/doc/politica_conf.pdf" target="_blank" class="policy__link">
+              конфиденциальности</a></label>
+        </div>
+        <button class="button modal__button button__secondary">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
 
   <script src="js/jquery.js"></script>
   <script src="js/jquery.mask.min.js"></script>
