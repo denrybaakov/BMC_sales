@@ -254,13 +254,14 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-          // $('.modal__form').hide();
+          // $('.modal').hide();
+          modal.removeClass('modal--visible');
           // $('.modal__dialog').html('<button class="modal__close"></button><h3 class="feedback">Ваша заявка <span class="feedback__primary">успешно отправлена</span></h3><p class="feedback__description">Наш менеджер свяжеться в ближайшее время. А пока Вы можете посетить нашу <a href="https://vk.com/" class="feedback__link">группу в Вконтакте</a></p>');
           // $('.modal__close').on('click', function () {
           //   modal.toggleClass('modal--visible');
           // });
           $('.review').addClass('review--visible');
-          $('.review__modal').html('<button class="modal__close"></button><h3 class="feedback">Ваша заявка <span class="feedback__primary">успешна отправлена</span></h3><p class="feedback__description">Наш менеджер свяжеться с Вами в ближайшее время. А пока Вы можете посетить нашу <a href="https://vk.com/" class="feedback__link">группу в Вконтакте</a></p>');
+          // $('.review__modal').html('<h3 class="feedback">Регистрация прошла успешно</h3><p>На вашу почту скоро придет сгенерированный пароль, после чего вы можете войти на сайт');
         }
       });
     },
@@ -308,9 +309,46 @@ form.addEventListener("submit", function (evt) {
 
 
 
+//=========================== timer ===============================
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
 
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = document.querySelector('.sale-day');
+  var hoursSpan = document.querySelector('.sale-hour');
+  var minutesSpan = document.querySelector('.sale-min');
+  var secondsSpan = document.querySelector('.sale-sec');
 
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
 
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
 
-//});
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = "July 01 2020 00:00:00 GMT+0300"; //for Ukraine
+var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
+initializeClock('countdown', deadline);

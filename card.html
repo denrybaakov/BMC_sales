@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
   <title>BMC SALES - партнерская сеть продаж</title>
+  <link rel="shortcut icon" type="image/ico" sizes="32x32" href="img/favicon.png">
 </head>
 
 <body class="page-card">
@@ -50,7 +51,8 @@
               </li>
             </ul>
           </div>
-          <a href="#" class="header-top__enter ">Вход на сайт <span class="header-top__lock"></span> </a>
+          <a href="#" class="header-top__enter " data-toggle="modal">Вход на сайт <span class="header-top__lock"></span>
+          </a>
         </div>
       </div>
     </div>
@@ -89,7 +91,9 @@
     <div class="mobile-header">
       <div class="container">
         <div class="row row-header">
-          <img src="img/header/logo.png" alt="Логотип">
+          <a href="index.html">
+            <img src="img/header/logo.png" alt="Логотип">
+          </a>
           <div class="hamburger-menu">
             <input id="menu__toggle" type="checkbox" />
             <label class="menu__btn" for="menu__toggle">
@@ -97,11 +101,13 @@
             </label>
             <ul class="menu__box">
               <li><a class="menu__item" href="#">Объявления</a></li>
-              <li><a class="menu__item" href="#">Каталоги</a></li>
+              <li><a class="menu__item" href="catalog.html">Каталоги</a></li>
               <li><a class="menu__item" href="#">Участники</a></li>
               <li><a class="menu__item" href="#">Партнеры</a></li>
               <li><a class="menu__item" href="#">О платформе</a></li>
               <li><a class="menu__item" href="#">Новости</a></li>
+              <li><a href="#" class="menu__item" data-toggle="modal">Вход на сайт <span class="header-top__lock"></span>
+                </a></li>
             </ul>
           </div>
         </div>
@@ -1197,6 +1203,16 @@
         </div>
         <button class="button modal__button button__secondary">Зарегистрироваться</button>
       </form>
+    </div>
+  </div>
+
+  <div class="review">
+    <div class="review__modal">
+      <img class="review__img" src="img/header/logo60.png" alt="logo">
+      <h3 class="feedback">Регистрация прошла успешно
+      </h3>
+      <p class="feedback__description">На вашу почту скоро придет сгенерированный пароль, после чего вы можете войти на
+        сайт</p>
     </div>
   </div>
 
