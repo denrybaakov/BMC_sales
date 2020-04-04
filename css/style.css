@@ -1051,22 +1051,28 @@ div.invalid {
       display: flex; }
 
 .navigation {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
   padding-top: 2.2rem;
-  margin-right: 0; }
+  margin-right: 0rem; }
   .navigation__item {
-    margin-right: 2.32rem;
-    padding-bottom: 0.7rem;
+    margin-right: 2.6rem;
+    padding-bottom: 1rem;
     font-family: 'DIN Pro Medium', sans-serif;
     font-weight: 400;
     font-size: 1.142rem;
     font-weight: bold;
     color: #202020;
     text-decoration: none; }
-    .navigation__item:hover:last-child {
-      border-bottom: none; }
     .navigation__item:hover {
       color: #f47920;
-      border-bottom: 1px solid #f47920; }
+      border-bottom: 1px solid #f47920 !important; }
+    .navigation__item--search:hover {
+      list-style: none;
+      border-bottom: none !important; }
     .navigation__item--catalog:after {
       content: '';
       margin: auto 0 0.21rem 0.642rem;
@@ -1090,6 +1096,35 @@ div.invalid {
     width: 17px;
     height: 16px;
     background: url(../img/header/search2.svg) no-repeat center/cover; }
+
+.navigation2 {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  padding: 1rem;
+  margin: 0;
+  list-style: none;
+  max-width: 44rem;
+  width: 100%;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff; }
+  .navigation2 li {
+    max-width: 25%;
+    width: 100%; }
+  .navigation2__catalog {
+    border: 1px solid rgba(145, 145, 145, 0.6); }
+  .navigation2__item {
+    display: block;
+    padding: 1rem;
+    color: rgba(32, 32, 32, 0.9);
+    font-family: 'DIN Pro Regular', sans-serif;
+    font-weight: 400;
+    font-size: 1.05rem; }
+    .navigation2__item:hover {
+      color: #f47920;
+      background-color: rgba(227, 226, 226, 0.4); }
 
 .header-block {
   margin-top: -0.2rem;
@@ -1369,13 +1404,18 @@ div.invalid {
     left: 0;
     width: 45px;
     height: 45px;
-    background-color: transparent;
-    border: 1px solid #cccccc;
+    background-color: #202020 !important;
     cursor: pointer;
-    background: url(../img/school/prev.png) no-repeat center center;
+    background: url(../img/prevSchool.png) no-repeat 45% center;
     z-index: 9; }
     .school-form__prev:focus {
       outline: none; }
+    .school-form__prev:hover {
+      background-color: #f8f6f7 !important;
+      border: 1px solid #cccccc;
+      cursor: pointer;
+      background: url(../img/school/prev.png) no-repeat 45% center;
+      z-index: 9; }
   .school-form__next {
     position: absolute;
     top: 69.9%;
@@ -1384,10 +1424,16 @@ div.invalid {
     height: 45px;
     background-color: #202020 !important;
     cursor: pointer;
-    background: url(../img/school/next.png) no-repeat center center;
+    background: url(../img/school/next.png) no-repeat 50% center;
     z-index: 9; }
     .school-form__next:focus {
       outline: none; }
+    .school-form__next:hover {
+      background-color: #f8f6f7 !important;
+      border: 1px solid #cccccc;
+      cursor: pointer;
+      background: url(../img/nextSchool.png) no-repeat 50% center;
+      z-index: 9; }
 
 .box-content {
   margin-bottom: 1.7rem;
@@ -1600,12 +1646,14 @@ div.invalid {
     margin-top: -13.9rem; } }
 
 @media screen and (max-width: 992px) {
-  .catalog__row {
-    flex-wrap: wrap;
-    justify-content: space-evenly; }
-  .catalog__col-30 {
-    margin-bottom: 8rem;
-    max-width: 29rem; } }
+  .catalog {
+    padding-bottom: 5rem; }
+    .catalog__row {
+      flex-wrap: wrap;
+      justify-content: space-evenly; }
+    .catalog__col-30 {
+      margin-bottom: 8rem;
+      max-width: 29rem; } }
 
 @media screen and (max-width: 768px) {
   .catalog {
@@ -1690,6 +1738,8 @@ div.invalid {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  .category-list__dop {
+    display: none; }
   .category-list__item {
     display: inline-block;
     min-width: 23rem;
@@ -2167,13 +2217,18 @@ div.invalid {
     display: inline-block;
     width: 45px;
     height: 45px;
-    background-color: transparent;
-    border: 1px solid #cccccc;
+    background-color: #202020 !important;
     cursor: pointer;
-    background: url(../img/school/prev.png) no-repeat center center;
+    background: url(../img/prevSchool.png) no-repeat 45% center;
     z-index: 9; }
     .service-button__prev:focus {
       outline: none; }
+    .service-button__prev:hover {
+      background-color: #f8f6f7 !important;
+      border: 1px solid #cccccc;
+      cursor: pointer;
+      background: url(../img/school/prev.png) no-repeat 45% center;
+      z-index: 9; }
   .service-button__next {
     display: inline-block;
     margin-left: 0.6rem;
@@ -2181,10 +2236,16 @@ div.invalid {
     height: 45px;
     background-color: #202020 !important;
     cursor: pointer;
-    background: url(../img/school/next.png) no-repeat center center;
+    background: url(../img/school/next.png) no-repeat 50% center;
     z-index: 9; }
     .service-button__next:focus {
       outline: none; }
+    .service-button__next:hover {
+      background-color: #f8f6f7 !important;
+      border: 1px solid #cccccc;
+      cursor: pointer;
+      background: url(../img/nextSchool.png) no-repeat 50% center;
+      z-index: 9; }
 
 @media screen and (max-width: 1200px) {
   .service__title {
@@ -3034,13 +3095,18 @@ div.invalid {
     display: inline-block;
     width: 45px;
     height: 45px;
-    background-color: transparent;
-    border: 1px solid #cccccc;
+    background-color: #202020 !important;
     cursor: pointer;
-    background: url(../img/school/prev.png) no-repeat center center;
+    background: url(../img/prevSchool.png) no-repeat 45% center;
     z-index: 9; }
     .favorite-block-button__prev:focus {
       outline: none; }
+    .favorite-block-button__prev:hover {
+      background-color: #f8f6f7 !important;
+      border: 1px solid #cccccc;
+      cursor: pointer;
+      background: url(../img/school/prev.png) no-repeat 45% center;
+      z-index: 9; }
   .favorite-block-button__next {
     display: inline-block;
     margin-left: 0.6rem;
@@ -3048,10 +3114,16 @@ div.invalid {
     height: 45px;
     background-color: #202020 !important;
     cursor: pointer;
-    background: url(../img/school/next.png) no-repeat center center;
+    background: url(../img/school/next.png) no-repeat 50% center;
     z-index: 9; }
     .favorite-block-button__next:focus {
       outline: none; }
+    .favorite-block-button__next:hover {
+      background-color: #f8f6f7 !important;
+      border: 1px solid #cccccc;
+      cursor: pointer;
+      background: url(../img/nextSchool.png) no-repeat 50% center;
+      z-index: 9; }
   .favorite-block__section-title {
     display: flex;
     justify-content: center;

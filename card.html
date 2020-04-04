@@ -62,15 +62,32 @@
           <img src="img/header/logo.png" alt="logo BMC SALES">
         </a>
         <div class="header-bottom__navigation">
-          <nav class="navigation">
-            <a href="#" class="navigation__item">Объявления</a>
-            <a href="#" class="navigation__item navigation__item--catalog">Каталоги</a>
-            <a href="#" class="navigation__item">Участники</a>
-            <a href="#" class="navigation__item">Партнеры</a>
-            <a href="#" class="navigation__item">О платформе</a>
-            <a href="#" class="navigation__item">Новости</a>
-            <a href="#" class="navigation__item navigation__item--search"><span class="navigation__search"></span></a>
-          </nav>
+          <ul class="navigation">
+            <li><a href="#" class="navigation__item">Объявления</a></li>
+            <li><a href="#" class="navigation__item navigation__item--catalog">Каталоги</a>
+              <ul class="navigation2 navigation2__catalog">
+                <li><a href="catalog.html" class="navigation2__item">Развлечение</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Посуда</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Зеркала</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Парфюмерия</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Техника</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Досуг</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Косметика</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Смартфоны</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Одежда</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Обувь</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Аксессуары</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Портфели</a></li>
+              </ul>
+
+            </li>
+            <li><a href="#" class="navigation__item">Участники</a></li>
+            <li><a href="#" class="navigation__item">Партнеры</a></li>
+            <li><a href="#" class="navigation__item">О платформе</a></li>
+            <li><a href="#" class="navigation__item">Новости</a></li>
+            <li><a href="#" class="navigation__item navigation__item--search"><span
+                  class="navigation__search"></span></a></li>
+          </ul>
 
           <div class="header-block">
             <div class="favorite">
@@ -1149,7 +1166,7 @@
             <a href="#">
               <img class="footer__image-google" src="img/footer/google.png" alt="Download Google Play">
             </a>
-            <button class="button button__secondary footer__button">Ваш профиль</button>
+            <button class="button button__secondary footer__button" data-toggle="modal">Ваш профиль</button>
           </div>
         </div>
 

@@ -46,6 +46,53 @@ $(document).ready(function () {
     },
   });
 
+  //===================== category-list =====================
+  // $('.navigation2').css({ 'display': 'flex' });
+  // $('.navigation2').css({ 'display': 'none' });
+  // $('a').on('click', function (e) {
+  //   e.preventDefault();
+  // });
+  $('.navigation li').hover(function () {
+    clearTimeout($.data(this, 'timer'));
+
+    $('ul', this).stop(true, true).css({ 'display': 'flex' }).slideDown(200);
+
+  }, function () {
+    $.data(this, 'timer', setTimeout($.proxy(function () {
+      $('ul', this).stop(true, true).slideUp(200);
+    }, this), 100));
+  });
+
+
+
+
+
+
+  var res = $('.category-list__dop');
+  $('#list-more').on("click", function () {
+    res.fadeIn(2000);
+    res.css({ 'display': 'block' }).fadeIn(2000);
+    $(this).css({ 'display': 'none' })
+  });
+
+
+
+
+  // $(document).click(function (e) {
+  //   if ($(e.target).closest(res).length || $(e.target).closest('#list-more').length) return;
+  //   res.fadeOut(1000);
+  //   e.stopPropagation();
+  // });
+
+  // function funk() {
+  //   if (res.css("display") == "none") {
+  //     res.fadeIn(1000);
+  //   } 
+  //   if (res.css('display') == '')
+
+  //   }
+  // }
+
 
 
 

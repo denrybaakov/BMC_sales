@@ -81,7 +81,34 @@
         </a>
 
         <div class="header-bottom__navigation">
-          <nav class="navigation">
+          <ul class="navigation">
+            <li><a href="#" class="navigation__item">Объявления</a></li>
+            <li><a href="#" class="navigation__item navigation__item--catalog">Каталоги</a>
+              <ul class="navigation2">
+                <li><a href="catalog.html" class="navigation2__item">Развлечение</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Посуда</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Зеркала</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Парфюмерия</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Техника</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Досуг</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Косметика</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Смартфоны</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Одежда</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Обувь</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Аксессуары</a></li>
+                <li><a href="catalog.html" class="navigation2__item">Портфели</a></li>
+              </ul>
+
+            </li>
+            <li><a href="#" class="navigation__item">Участники</a></li>
+            <li><a href="#" class="navigation__item">Партнеры</a></li>
+            <li><a href="#" class="navigation__item">О платформе</a></li>
+            <li><a href="#" class="navigation__item">Новости</a></li>
+            <li><a href="#" class="navigation__item navigation__item--search"><span
+                  class="navigation__search"></span></a></li>
+          </ul>
+
+          <!-- <nav class="navigation">
             <a href="#" class="navigation__item">Объявления</a>
             <a href="#" class="navigation__item navigation__item--catalog">Каталоги</a>
             <a href="#" class="navigation__item">Участники</a>
@@ -89,7 +116,7 @@
             <a href="#" class="navigation__item">О платформе</a>
             <a href="#" class="navigation__item">Новости</a>
             <a href="#" class="navigation__item navigation__item--search"><span class="navigation__search"></span></a>
-          </nav>
+          </nav> -->
 
           <div class="header-block">
             <div class="favorite">
@@ -237,12 +264,28 @@
           <h2 class="title category__title">Категории товаров</h2>
         </div>
         <ul class="category-list">
-          <li><a href="#" class="category-list__item category-list__item--1">Развлечение и досуг</a></li>
-          <li><a href="#" class="category-list__item category-list__item--2">Посуда и зеркала</a></li>
-          <li><a href="#" class="category-list__item category-list__item--3">Парфюмерия и косметика</a></li>
-          <li><a href="#" class="category-list__item category-list__item--4">Компьютерная техника</a></li>
+          <li><a href="catalog.html" class="category-list__item category-list__item--1">Развлечение и досуг</a></li>
+          <li><a href="catalog.html" class="category-list__item category-list__item--2">Посуда и зеркала</a></li>
+          <li><a href="catalog.html" class="category-list__item category-list__item--3">Парфюмерия и косметика</a></li>
+          <li><a href="catalog.html" class="category-list__item category-list__item--4">Компьютерная техника</a></li>
         </ul>
-        <button class="button category__button">Еще</button>
+        <div class="category-list__dop">
+          <ul class="category-list">
+            <li><a href="catalog.html" class="category-list__item category-list__item--3">Парфюмерия и косметика</a>
+            </li>
+            <li><a href="catalog.html" class="category-list__item category-list__item--4">Компьютерная техника</a></li>
+            <li><a href="catalog.html" class="category-list__item category-list__item--2">Посуда и зеркала</a></li>
+            <li><a href="catalog.html" class="category-list__item category-list__item--1">Развлечение и досуг</a></li>
+          </ul>
+          <ul class="category-list">
+            <li><a href="catalog.html" class="category-list__item category-list__item--4">Компьютерная техника</a></li>
+            <li><a href="catalog.html" class="category-list__item category-list__item--3">Парфюмерия и косметика</a>
+            </li>
+            <li><a href="catalog.html" class="category-list__item category-list__item--1">Развлечение и досуг</a></li>
+            <li><a href="catalog.html" class="category-list__item category-list__item--2">Посуда и зеркала</a></li>
+          </ul>
+        </div>
+        <button class="button category__button" id="list-more">Еще</button>
       </div>
     </section>
 
@@ -807,7 +850,7 @@
             <a href="#">
               <img class="footer__image-google" src="img/footer/google.png" alt="Download Google Play">
             </a>
-            <button class="button button__secondary footer__button">Ваш профиль</button>
+            <button class="button button__secondary footer__button" data-toggle="modal">Ваш профиль</button>
           </div>
         </div>
 
