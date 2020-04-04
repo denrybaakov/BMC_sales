@@ -1572,13 +1572,15 @@ div.invalid {
     font-size: 1rem;
     color: #919191;
     line-height: 24px;
-    margin-bottom: 0.8rem; }
+    margin-bottom: 0.2rem; }
   .catalog__subtitle {
+    margin-top: 0;
+    margin-bottom: 1.6rem;
     color: #202020;
-    font-family: 'DIN Pro Medium', sans-serif;
+    font-family: 'DIN Pro Regular', sans-serif;
     font-weight: 400;
-    font-size: 1.3rem;
-    text-transform: uppercase;
+    line-height: 10px;
+    font-size: 1.714rem;
     display: block; }
 
 .content__btn {
