@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   var swiperSchool = new Swiper('.school-form__swiper', {
     loop: true,
     navigation: {
@@ -99,116 +100,116 @@ $(document).ready(function () {
 
 
   //======================= SELECT ==============================
-  $('.select').each(function () {
-    const _this = $(this),
-      selectOption = _this.find('option'),
-      selectOptionLength = selectOption.length,
-      selectedOption = selectOption.filter(':selected'),
-      duration = 450; // длительность анимации 
+  // $('.select').each(function () {
+  //   const _this = $(this),
+  //     selectOption = _this.find('option'),
+  //     selectOptionLength = selectOption.length,
+  //     selectedOption = selectOption.filter(':selected'),
+  //     duration = 450; // длительность анимации 
 
-    _this.hide();
-    _this.wrap('<div class="select"></div>');
-    $('<div>', {
-      class: 'new-select',
-      text: _this.children('option:disabled').text()
-    }).insertAfter(_this);
+  //   $(this).hide();
+  //   $(this).wrap('<div class="select"></div>');
+  //   $('<div>', {
+  //     class: 'new-select',
+  //     text: _this.children('option:disabled').text()
+  //   }).insertAfter(_this);
 
-    const selectHead = _this.next('.new-select');
-    $('<div>', {
-      class: 'new-select__list'
-    }).insertAfter(selectHead);
+  //   const selectHead = _this.next('.new-select');
+  //   $('<div>', {
+  //     class: 'new-select__list'
+  //   }).insertAfter(selectHead);
 
-    const selectList = selectHead.next('.new-select__list');
-    for (let i = 1; i < selectOptionLength; i++) {
-      $('<div>', {
-        class: 'new-select__item',
-        html: $('<span>', {
-          text: selectOption.eq(i).text()
-        })
-      })
-        .attr('data-value', selectOption.eq(i).val())
-        .appendTo(selectList);
-    }
+  //   const selectList = selectHead.next('.new-select__list');
+  //   for (let i = 1; i < selectOptionLength; i++) {
+  //     $('<div>', {
+  //       class: 'new-select__item',
+  //       html: $('<span>', {
+  //         text: selectOption.eq(i).text()
+  //       })
+  //     })
+  //       .attr('data-value', selectOption.eq(i).val())
+  //       .appendTo(selectList);
+  //   }
 
-    const selectItem = selectList.find('.new-select__item');
-    selectList.slideUp(0);
-    selectHead.on('click', function () {
-      if (!$(this).hasClass('on')) {
-        $(this).addClass('on');
-        selectList.slideDown(duration);
+  //   const selectItem = selectList.find('.new-select__item');
+  //   selectList.slideUp(0);
+  //   selectHead.on('click', function () {
+  //     if (!$(this).hasClass('on')) {
+  //       $(this).addClass('on');
+  //       selectList.slideDown(duration);
 
-        selectItem.on('click', function () {
-          let chooseItem = $(this).data('value');
+  //       selectItem.on('click', function () {
+  //         let chooseItem = $(this).data('value');
 
-          $('select').val(chooseItem).attr('selected', 'selected');
-          selectHead.text($(this).find('span').text());
+  //         $('select').val(chooseItem).attr('selected', 'selected');
+  //         selectHead.text($(this).find('span').text());
 
-          selectList.slideUp(duration);
-          selectHead.removeClass('on');
-        });
+  //         selectList.slideUp(duration);
+  //         selectHead.removeClass('on');
+  //       });
 
-      } else {
-        $(this).removeClass('on');
-        selectList.slideUp(duration);
-      }
-    });
-  });
+  //     } else {
+  //       $(this).removeClass('on');
+  //       selectList.slideUp(duration);
+  //     }
+  //   });
+  // });
 
 
-  $('.select2').each(function () {
-    const _this = $(this),
-      selectOption = _this.find('option'),
-      selectOptionLength = selectOption.length,
-      selectedOption = selectOption.filter(':selected'),
-      duration = 450; // длительность анимации 
+  // $('.select2').each(function () {
+  //   const _this = $(this),
+  //     selectOption = _this.find('option'),
+  //     selectOptionLength = selectOption.length,
+  //     selectedOption = selectOption.filter(':selected'),
+  //     duration = 450; // длительность анимации 
 
-    _this.hide();
-    _this.wrap('<div class="select2"></div>');
-    $('<div>', {
-      class: 'new-select2',
-      text: _this.children('option:disabled').text()
-    }).insertAfter(_this);
+  //   $(this).hide();
+  //   $(this).wrap('<div class="select2"></div>');
+  //   $('<div>', {
+  //     class: 'new-select2',
+  //     text: _this.children('option:disabled').text()
+  //   }).insertAfter(_this);
 
-    const selectHead = _this.next('.new-select2');
-    $('<div>', {
-      class: 'new-select__list2'
-    }).insertAfter(selectHead);
+  //   const selectHead = _this.next('.new-select2');
+  //   $('<div>', {
+  //     class: 'new-select__list2'
+  //   }).insertAfter(selectHead);
 
-    const selectList = selectHead.next('.new-select__list2');
-    for (let i = 1; i < selectOptionLength; i++) {
-      $('<div>', {
-        class: 'new-select__item2',
-        html: $('<span>', {
-          text: selectOption.eq(i).text()
-        })
-      })
-        .attr('data-value', selectOption.eq(i).val())
-        .appendTo(selectList);
-    }
+  //   const selectList = selectHead.next('.new-select__list2');
+  //   for (let i = 1; i < selectOptionLength; i++) {
+  //     $('<div>', {
+  //       class: 'new-select__item2',
+  //       html: $('<span>', {
+  //         text: selectOption.eq(i).text()
+  //       })
+  //     })
+  //       .attr('data-value', selectOption.eq(i).val())
+  //       .appendTo(selectList);
+  //   }
 
-    const selectItem = selectList.find('.new-select__item2');
-    selectList.slideUp(0);
-    selectHead.on('click', function () {
-      if (!$(this).hasClass('on')) {
-        $(this).addClass('on');
-        selectList.slideDown(duration);
+  //   const selectItem = selectList.find('.new-select__item2');
+  //   selectList.slideUp(0);
+  //   selectHead.on('click', function () {
+  //     if (!$(this).hasClass('on')) {
+  //       $(this).addClass('on');
+  //       selectList.slideDown(duration);
 
-        selectItem.on('click', function () {
-          let chooseItem = $(this).data('value');
+  //       selectItem.on('click', function () {
+  //         let chooseItem = $(this).data('value');
 
-          $('select').val(chooseItem).attr('selected', 'selected');
-          selectHead.text($(this).find('span').text());
+  //         $('select').val(chooseItem).attr('selected', 'selected');
+  //         selectHead.text($(this).find('span').text());
 
-          selectList.slideUp(duration);
-          selectHead.removeClass('on');
-        });
+  //         selectList.slideUp(duration);
+  //         selectHead.removeClass('on');
+  //       });
 
-      } else {
-        $(this).removeClass('on');
-        selectList.slideUp(duration);
-      }
-    });
-  });
+  //     } else {
+  //       $(this).removeClass('on');
+  //       selectList.slideUp(duration);
+  //     }
+  //   });
+  // });
 
 
 
@@ -328,6 +329,126 @@ $(document).ready(function () {
   //=================== Mask Phone =====================
   $('[type=tel]').mask('+7 (000) 000-00-00', { placeholder: "Ваш номер телефона: " });
   // $('[type=tel]').mask('+8 (000) 000-00-00 ', { placeholder: "____________" });
+
+
+
+
+
+
+
+
+
+
+  $('.select').each(function () {
+    const _this = $(this),
+      selectOption = _this.find('option'),
+      selectOptionLength = selectOption.length,
+      selectedOption = selectOption.filter(':selected'),
+      duration = 10; // длительность анимации 
+
+    $(this).hide();
+    $(this).wrap('<div class="select"></div>');
+    $('<div>', {
+      class: 'new-select',
+      text: _this.children('option:disabled').text()
+    }).insertAfter(_this);
+
+    const selectHead = _this.next('.new-select');
+    $('<div>', {
+      class: 'new-select__list'
+    }).insertAfter(selectHead);
+
+    const selectList = selectHead.next('.new-select__list');
+    for (let i = 1; i < selectOptionLength; i++) {
+      $('<div>', {
+        class: 'new-select__item',
+        html: $('<span>', {
+          text: selectOption.eq(i).text()
+        })
+      })
+        .attr('data-value', selectOption.eq(i).val())
+        .appendTo(selectList);
+    }
+
+    const selectItem = selectList.find('.new-select__item');
+    selectList.slideUp(0);
+    selectHead.on('click', function () {
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        selectList.slideDown(duration);
+
+        selectItem.on('click', function () {
+          let chooseItem = $(this).data('value');
+
+          $('select').val(chooseItem).attr('selected', 'selected');
+          selectHead.text($(this).find('span').text());
+
+          selectList.slideUp(duration);
+          selectHead.removeClass('on');
+        });
+
+      } else {
+        $(this).removeClass('on');
+        selectList.slideUp(duration);
+      }
+    });
+  });
+
+
+  $('.select2').each(function () {
+    const _this = $(this),
+      selectOption = _this.find('option'),
+      selectOptionLength = selectOption.length,
+      selectedOption = selectOption.filter(':selected'),
+      duration = 0; // длительность анимации 
+
+    $(this).hide();
+    $(this).wrap('<div class="select2"></div>');
+    $('<div>', {
+      class: 'new-select2',
+      text: _this.children('option:disabled').text()
+    }).insertAfter(_this);
+
+    const selectHead = _this.next('.new-select2');
+    $('<div>', {
+      class: 'new-select__list2'
+    }).insertAfter(selectHead);
+
+    const selectList = selectHead.next('.new-select__list2');
+    for (let i = 1; i < selectOptionLength; i++) {
+      $('<div>', {
+        class: 'new-select__item2',
+        html: $('<span>', {
+          text: selectOption.eq(i).text()
+        })
+      })
+        .attr('data-value', selectOption.eq(i).val())
+        .appendTo(selectList);
+    }
+
+    const selectItem = selectList.find('.new-select__item2');
+    selectList.slideUp(0);
+    selectHead.on('click', function () {
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        selectList.slideDown(duration);
+
+        selectItem.on('click', function () {
+          let chooseItem = $(this).data('value');
+
+          $('select').val(chooseItem).attr('selected', 'selected');
+          selectHead.text($(this).find('span').text());
+
+          selectList.slideUp(duration);
+          selectHead.removeClass('on');
+        });
+
+      } else {
+        $(this).removeClass('on');
+        selectList.slideUp(duration);
+      }
+    });
+  });
 
 });
 
