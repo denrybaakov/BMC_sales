@@ -47,12 +47,10 @@ $(document).ready(function () {
     },
   });
 
+
+
+
   //===================== category-list =====================
-  // $('.navigation2').css({ 'display': 'flex' });
-  // $('.navigation2').css({ 'display': 'none' });
-  // $('a').on('click', function (e) {
-  //   e.preventDefault();
-  // });
   $('.navigation li').hover(function () {
     clearTimeout($.data(this, 'timer'));
 
@@ -68,7 +66,6 @@ $(document).ready(function () {
 
 
 
-
   var res = $('.category-list__dop');
   $('#list-more').on("click", function () {
     res.fadeIn(2000);
@@ -79,140 +76,11 @@ $(document).ready(function () {
 
 
 
-  // $(document).click(function (e) {
-  //   if ($(e.target).closest(res).length || $(e.target).closest('#list-more').length) return;
-  //   res.fadeOut(1000);
-  //   e.stopPropagation();
-  // });
-
-  // function funk() {
-  //   if (res.css("display") == "none") {
-  //     res.fadeIn(1000);
-  //   } 
-  //   if (res.css('display') == '')
-
-  //   }
-  // }
 
 
 
 
-
-
-  //======================= SELECT ==============================
-  // $('.select').each(function () {
-  //   const _this = $(this),
-  //     selectOption = _this.find('option'),
-  //     selectOptionLength = selectOption.length,
-  //     selectedOption = selectOption.filter(':selected'),
-  //     duration = 450; // длительность анимации 
-
-  //   $(this).hide();
-  //   $(this).wrap('<div class="select"></div>');
-  //   $('<div>', {
-  //     class: 'new-select',
-  //     text: _this.children('option:disabled').text()
-  //   }).insertAfter(_this);
-
-  //   const selectHead = _this.next('.new-select');
-  //   $('<div>', {
-  //     class: 'new-select__list'
-  //   }).insertAfter(selectHead);
-
-  //   const selectList = selectHead.next('.new-select__list');
-  //   for (let i = 1; i < selectOptionLength; i++) {
-  //     $('<div>', {
-  //       class: 'new-select__item',
-  //       html: $('<span>', {
-  //         text: selectOption.eq(i).text()
-  //       })
-  //     })
-  //       .attr('data-value', selectOption.eq(i).val())
-  //       .appendTo(selectList);
-  //   }
-
-  //   const selectItem = selectList.find('.new-select__item');
-  //   selectList.slideUp(0);
-  //   selectHead.on('click', function () {
-  //     if (!$(this).hasClass('on')) {
-  //       $(this).addClass('on');
-  //       selectList.slideDown(duration);
-
-  //       selectItem.on('click', function () {
-  //         let chooseItem = $(this).data('value');
-
-  //         $('select').val(chooseItem).attr('selected', 'selected');
-  //         selectHead.text($(this).find('span').text());
-
-  //         selectList.slideUp(duration);
-  //         selectHead.removeClass('on');
-  //       });
-
-  //     } else {
-  //       $(this).removeClass('on');
-  //       selectList.slideUp(duration);
-  //     }
-  //   });
-  // });
-
-
-  // $('.select2').each(function () {
-  //   const _this = $(this),
-  //     selectOption = _this.find('option'),
-  //     selectOptionLength = selectOption.length,
-  //     selectedOption = selectOption.filter(':selected'),
-  //     duration = 450; // длительность анимации 
-
-  //   $(this).hide();
-  //   $(this).wrap('<div class="select2"></div>');
-  //   $('<div>', {
-  //     class: 'new-select2',
-  //     text: _this.children('option:disabled').text()
-  //   }).insertAfter(_this);
-
-  //   const selectHead = _this.next('.new-select2');
-  //   $('<div>', {
-  //     class: 'new-select__list2'
-  //   }).insertAfter(selectHead);
-
-  //   const selectList = selectHead.next('.new-select__list2');
-  //   for (let i = 1; i < selectOptionLength; i++) {
-  //     $('<div>', {
-  //       class: 'new-select__item2',
-  //       html: $('<span>', {
-  //         text: selectOption.eq(i).text()
-  //       })
-  //     })
-  //       .attr('data-value', selectOption.eq(i).val())
-  //       .appendTo(selectList);
-  //   }
-
-  //   const selectItem = selectList.find('.new-select__item2');
-  //   selectList.slideUp(0);
-  //   selectHead.on('click', function () {
-  //     if (!$(this).hasClass('on')) {
-  //       $(this).addClass('on');
-  //       selectList.slideDown(duration);
-
-  //       selectItem.on('click', function () {
-  //         let chooseItem = $(this).data('value');
-
-  //         $('select').val(chooseItem).attr('selected', 'selected');
-  //         selectHead.text($(this).find('span').text());
-
-  //         selectList.slideUp(duration);
-  //         selectHead.removeClass('on');
-  //       });
-
-  //     } else {
-  //       $(this).removeClass('on');
-  //       selectList.slideUp(duration);
-  //     }
-  //   });
-  // });
-
-
-
+  //======================= modal ===============================
 
   var modal = $('.modal'),
     modalBtn = $('[data-toggle=modal]'),
@@ -304,12 +172,9 @@ $(document).ready(function () {
           $(form)[0].reset();
           // $('.modal').hide();
           modal.removeClass('modal--visible');
-          // $('.modal__dialog').html('<button class="modal__close"></button><h3 class="feedback">Ваша заявка <span class="feedback__primary">успешно отправлена</span></h3><p class="feedback__description">Наш менеджер свяжеться в ближайшее время. А пока Вы можете посетить нашу <a href="https://vk.com/" class="feedback__link">группу в Вконтакте</a></p>');
-          // $('.modal__close').on('click', function () {
-          //   modal.toggleClass('modal--visible');
-          // });
+
           $('.review').addClass('review--visible');
-          // $('.review__modal').html('<h3 class="feedback">Регистрация прошла успешно</h3><p>На вашу почту скоро придет сгенерированный пароль, после чего вы можете войти на сайт');
+
         }
       });
     },
@@ -328,16 +193,11 @@ $(document).ready(function () {
 
   //=================== Mask Phone =====================
   $('[type=tel]').mask('+7 (000) 000-00-00', { placeholder: "Ваш номер телефона: " });
-  // $('[type=tel]').mask('+8 (000) 000-00-00 ', { placeholder: "____________" });
 
 
 
 
-
-
-
-
-
+  //==================== select =============================
 
   $('.select').each(function () {
     const _this = $(this),
@@ -453,6 +313,8 @@ $(document).ready(function () {
 });
 
 
+//================= animation modal =========================
+
 // let link = document.querySelector('.login-link');
 let popup = document.querySelector('.modal__dialog');
 let close = popup.querySelector('.modal-close');
@@ -478,45 +340,3 @@ form.addEventListener("submit", function (evt) {
 
 
 //=========================== timer ===============================
-function getTimeRemaining(endtime) {
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor((t / 1000) % 60);
-  var minutes = Math.floor((t / 1000 / 60) % 60);
-  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-  var days = Math.floor(t / (1000 * 60 * 60 * 24));
-  return {
-    'total': t,
-    'days': days,
-    'hours': hours,
-    'minutes': minutes,
-    'seconds': seconds
-  };
-}
-
-function initializeClock(id, endtime) {
-  var clock = document.getElementById(id);
-  var daysSpan = document.querySelector('.sale-day');
-  var hoursSpan = document.querySelector('.sale-hour');
-  var minutesSpan = document.querySelector('.sale-min');
-  var secondsSpan = document.querySelector('.sale-sec');
-
-  function updateClock() {
-    var t = getTimeRemaining(endtime);
-
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-    }
-  }
-
-  updateClock();
-  var timeinterval = setInterval(updateClock, 1000);
-}
-
-var deadline = "July 01 2020 00:00:00 GMT+0300"; //for Ukraine
-var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
-initializeClock('countdown', deadline);

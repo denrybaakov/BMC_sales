@@ -379,6 +379,7 @@
     display: none
     &-top, &-bottom
       display: none
+
   .mobile-header
     position: fixed
     top: 0
@@ -389,3 +390,39 @@
     background-color: $bgFiollet
     border-bottom: 1px solid rgba($gray, 0.5)
     z-index: 999999999999
+    &__row
+
+    &__block
+      position: absolute
+      top: -4px
+      right: 7.5%
+    &--login
+      position: absolute
+      top: 0
+      right: 20%
+      font-size: 1.3rem !important
+
+  .menu__box
+    overflow: scroll
+    height: 100vh
+    width: 230px !important
+
+    li
+      z-index: 1
+  .menu__item
+    text-align: left !important
+    padding: 12px 35px 12px 35px !important
+
+@media screen and ( max-width: 768px )
+  .mobile-header
+    &__block
+      display: none
+
+@media screen and ( max-height: 400px )
+  .menu__box
+    width: 200px !important
+    padding-bottom: 0 !important
+  .menu__item
+    text-align: left !important
+    font-size: 1.2rem !important
+    color: red

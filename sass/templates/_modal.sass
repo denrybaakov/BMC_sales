@@ -47,7 +47,7 @@
     &:focus
       outline: none
     &:hover
-      background: transparent url(../img/x-circle2.svg) no-repeat center
+      // background: transparent url(../img/x-circle2.svg) no-repeat center
   &__title
     margin: 0 0 2.428rem 0
     +medium
@@ -105,3 +105,22 @@
   60%,
   80%
     transform: translateX(10px)
+
+@media screen and ( max-height: 400px )
+  .modal
+    &__dialog
+      overflow: scroll
+      padding-top: 1.35rem
+      height: 91vh
+    &__title
+      margin-bottom: 0.98rem
+    &__button
+      padding: 10px 49px
+  .input__user, .input__phone, .input__email
+    padding: 0.8rem 4rem 0.8rem 1rem
+  div.invalid
+    top: 37px
+  .policy__checkbox
+    position: absolute
+  #policyCheckbox-error
+    top: 23px

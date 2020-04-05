@@ -172,13 +172,32 @@
         margin-left: 7rem
         margin-top: 4.9rem
     &__prev
-      top: 80.9%
-      left: 5%
+      top: 86%
+      left: 50%
+      margin-left: -3.5rem
     &__next
-      top: 80.9%
-      left: 73%
+      top: 86%
+      left: 50%
+      margin-left: 3.5rem
   .button__primary
     display: none
 
   .social-links
     display: none
+
+@media screen and ( max-width: 450px )
+  .school-form
+    &__prev
+      top: 85%
+      left: 50%
+      margin-left: -2rem
+      width: 35px
+      height: 35px
+      background: url(../img/prevSchool.png) no-repeat 45% center / 40%
+    &__next
+      top: 85%
+      left: 50%
+      width: 35px
+      height: 35px
+      margin-left: 2rem
+      background: url(../img/prevSchool.png) no-repeat 45% center / 40%
